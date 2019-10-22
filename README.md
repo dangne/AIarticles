@@ -1,2 +1,2 @@
 # AIarticles
-My collection of cool AI articles
+These articles are awesome
