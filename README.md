@@ -7,6 +7,7 @@
 ## Computer Vision
 
 - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
+- [Facial Expression Recognition via a Boosted Deep Belief Network](http://openaccess.thecvf.com/content_cvpr_2014/papers/Liu_Facial_Expression_Recognition_2014_CVPR_paper.pdf)
 
 
 
