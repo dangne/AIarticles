@@ -28,4 +28,4 @@
 
 - [Graph Neural Networks: A Review of Methods and Applications](https://arxiv.org/pdf/1812.08434.pdf)
 - [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/pdf/1506.01186.pdf)
-- [Capsule Networks](https://arxiv.org/pdf/1710.09829.pdf)
+- [Dynamic Routing Between Capsules](https://arxiv.org/pdf/1710.09829.pdf)
