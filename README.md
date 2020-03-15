@@ -29,3 +29,4 @@
 - [Graph Neural Networks: A Review of Methods and Applications](https://arxiv.org/pdf/1812.08434.pdf)
 - [Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/pdf/1506.01186.pdf)
 - [Dynamic Routing Between Capsules](https://arxiv.org/pdf/1710.09829.pdf)
+- [Neural Tangents: Fast And Easy Infinite Neural Networks In Python](https://arxiv.org/pdf/1912.02803.pdf)
