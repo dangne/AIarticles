@@ -1,6 +1,7 @@
 ## Natural Language Processing
 - [Reformer: The Efficient Transformer](https://arxiv.org/pdf/2001.04451.pdf)
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
 
 
 
