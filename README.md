@@ -4,6 +4,7 @@
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 - [Reformer: The Efficient Transformer](https://arxiv.org/pdf/2001.04451.pdf)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
+- [PhoBERT: Pre-trained language models for Vietnamese](https://arxiv.org/pdf/2003.00744.pdf)
 
 
 
