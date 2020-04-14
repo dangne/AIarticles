@@ -5,6 +5,8 @@
 - [Reformer: The Efficient Transformer](https://arxiv.org/pdf/2001.04451.pdf)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
 - [PhoBERT: Pre-trained language models for Vietnamese](https://arxiv.org/pdf/2003.00744.pdf)
+- [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- [Language Models are Unsupervised Multitask Learners](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 
 
 
