@@ -1,0 +1,46 @@
+# Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment
+
+- Link: https://arxiv.org/pdf/1907.11932.pdf
+  - [x] First pass
+  - [x] Second pass
+  - [x] Third pass
+- Key-points:
+  - We propose a simple but strong baseline, TEXTFOOLER, to quickly generate high-profile utility-preserving adver- sarial examples that force the target models to make wrong predictions under the black-box setting.
+  - We evaluate TEXTFOOLER on three state-of-the-art deep learning models over five popular text classification tasks and two textual entailment tasks, and it achieved the state- of-the-art attack success rate and perturbation rate.
+  - We propose a comprehensive four-way automatic and three-way human evaluation of language adversarial at- tacks to evaluate the effectiveness, efficiency, and utility- preserving properties of our system.
+  - We open-source the code, pre-trained target models, and test samples for the convenience of future benchmarking.
+  - The proposed approach consists of the two main steps:
+    - **Step 1: Word Importance Ranking:** 
+      - For each word in the original sentence, compute its important score as follow: <img src="https://latex.codecogs.com/gif.latex?I_{w_i}=&space;\begin{cases}&space;F_Y(X)-F_Y(X_{\setminus&space;w_i})&space;&&space;\text{,&space;if&space;}&space;F(X)=F(X_{\setminus&space;w_i})=Y&space;\\&space;(F_Y(X)-F_Y(X_{\setminus&space;w_i}))&space;&plus;&space;(F_{\bar{Y}}(X_{\setminus&space;w_i})-F_{\bar{Y}}(X))&space;&&space;\text{,&space;if&space;}&space;F(X)=Y,&space;F(X_{\setminus&space;w_i})=\bar{Y}\text{,&space;and&space;}Y\neq\bar{Y}&space;\end{cases}" title="I_{w_i}= \begin{cases} F_Y(X)-F_Y(X_{\setminus w_i}) & \text{, if } F(X)=F(X_{\setminus w_i})=Y \\ (F_Y(X)-F_Y(X_{\setminus w_i})) + (F_{\bar{Y}}(X_{\setminus w_i})-F_{\bar{Y}}(X)) & \text{, if } F(X)=Y, F(X_{\setminus w_i})=\bar{Y}\text{, and }Y\neq\bar{Y} \end{cases}" />
+      - Sort all words by their important scores
+      - Filter out stop words (using NLTK and spaCy)
+    - **Step 2: Word Transformer:**
+      - The replaced word must fulfill the following criteria: it should (1) have similar semantic meaning with the original one, (2) fit within the surrounding context, and (3) force the target model to make wrong predictions.
+      - **Synonym Extraction:**
+        - The counter-fitting word embedding is used. These word vectors are specially curated for finding synonyms (Mrkšić et al. 2016)
+        - Find N closest synonyms (using cosine similarity)
+      - **POS Checking:**
+        - In the set of candidates, only keep words that are the same POS. This is to maintain the grammar of the text.
+      - **Semantic Similarity Checking:**
+        - For each of the remaining words, subtitute it to the original word
+        - Use Universal Sentence Encoder (Cer et al. 2018) to encode the two sentences into high dimensional vectors and use their cosine similarity score as an approximation of semantic similarity
+        - The words resulting in high similarity score above a threshold are place into the final candidate pool.
+      - **Finalization of Adversarial Examples:**
+        - If there exists any candidate that can already alter the prediction of the target model, then we choose the word with the highest semantic similarity score among these winning candidates. But if not, then we select the word with the least confidence score of label y as the best replacement word for w_i, and repeat Step 2 to transform the next selected word.
+
+- Dataset:
+  - Text Classification
+    - AG's News
+    - Fake News Detection
+    - MR
+    - IMDB
+    - Yelp Polarity
+  - Textual Entailment
+    - SNLI
+    - MultiSNLI
+- Performance:
+  - Beat:
+    - (Li et al. 2018) that generates misspelled words by character and word-level perturbation
+    - (Alzantot et al. 2018) that iterates through every word in the sentence and find its perturbation
+    - (Kuleshov et al. 2018) that uses word replacement by greedy heuristics
+    - ![](https://github.com/dangne/paper-notes/blob/img/Annotation%202020-08-20%20113256.png?raw=true)
