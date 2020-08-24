@@ -1,0 +1,25 @@
+# Explaining And Harnessing Adversarial Examples
+
+- Link: https://arxiv.org/pdf/1412.6572.pdf
+  - [x] First pass
+  - [x] Second pass
+  - [ ] Third pass
+- Key-points:
+  - Adversarial examples can be explained as a property of high-dimensional dot products. They are a result of models being too linear, rather than too nonlinear.
+- The generalization of adversarial examples across different models can be explained as a result of adversarial perturbations being highly aligned with the weight vectors of a model, and different models learning similar functions when trained to perform the same task.
+  - The direction of perturbation, rather than the specific point in space, matters most. Space is not full of pockets of adversarial examples that finely tile the reals like the rational numbers.
+  - Because it is the direction that matters most, adversarial perturbations generalize across different clean examples.
+  - We have introduced a family of fast methods for generating adversarial examples.
+  - We have demonstrated that adversarial training can result in regularization; even further regularization than dropout.
+  - We have run control experiments that failed to reproduce this effect with simpler but less efficient regularizers including L1 weight decay and adding noise.
+  - Models that are easy to optimize are easy to perturb.
+  - Linear models lack the capacity to resist adversarial perturbation; only structures with a hidden layer (where the universal approximator theorem applies) should be trained to resist adversarial perturbation.
+  - RBF networks are resistant to adversarial examples.
+  - Models trained to model the input distribution are not resistant to adversarial examples.
+  - Ensembles are not resistant to adversarial examples.
+  - Some further observations concerning rubbish class examples are presented in the appendix:
+    - Rubbish class examples are ubiquitous and easily generated.
+    - Shallow linear models are not resistant to rubbish class examples.
+    - RBF networks are resistant to rubbish class examples
+- Dataset:
+  - MNIST
