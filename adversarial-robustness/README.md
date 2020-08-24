@@ -45,3 +45,6 @@
 - [ ] **Adversarial training methods for semi-supervised text classification**. (2017)
 - [ ] **Interpretable adversarial perturbation in input embedding space for text**. (2018)
 - [ ] **Interpretable adversarial training for text**. (2019)
+
+## Misc
+- [ ] **Robustness May Be at Odds with Accuracy**. (2018) **(Important finding: There may be a trade-off between adversarial robustness and standard accuracy)**
