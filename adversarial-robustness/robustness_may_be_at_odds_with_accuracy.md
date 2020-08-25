@@ -2,14 +2,14 @@
 
 - Link: https://arxiv.org/pdf/1805.12152.pdf
   - [x] First pass
-  - [ ] Second pass
+  - [x] Second pass
   - [ ] Third pass
 - Key-points:
-  - The goal of adversarially robust generalization might fundamentally be at odds with that of standard generalization
-- It emphasizes the need to develop robust training methods, since robustness is unlikely to arise as a consequence of standard training
-  - Moreover, we discover that even though adversarial robustness comes at a price, it has some unexpected benefits. Robust models learn meaningful feature representations that align well with salient data characteristics
-  - We demonstrate a striking consequence of this phenomenon: robust models yield clean feature interpolations similar to those obtained from generative models such as GANs. This emphasizes the possibility of a stronger connection between
-  - Finally, our findings show that the interplay between adversarial robustness and standard classification might be more nuanced that one might expect
+  - The paper shows that by increasing the adversarial data in training, it improves the robustness but damages the standard accuracy of the model. There **might** be a trade-off between standard accuracy vs robustness (even if we have infite data!).
+  - The paper shows that adversarial robustness had some unexpected benefits:
+    - The loss gradient of robust models align well with human perception, whereas in standard models, the loss gradients often are noisy and hard to intepret.
+    - Adversarial examples exhibit salient data characteristics
+    - Smooth cross-class interpolations via gradient descent
 - Dataset:
   - MNIST
   - CIFAR-10
