@@ -27,7 +27,7 @@
   - **The value of the saddle point problem decreases as we increase the capacity:**
   
   - **More capacity and stronger adversaries decrease transferability:**
-- *Dataset:
+- Dataset:
   
   - MNIST
   - CIFAR10
