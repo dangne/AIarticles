@@ -2,7 +2,7 @@
 
 - Link: https://arxiv.org/pdf/1707.07328.pdf
   - [x] First pass
-  - [ ] Second pass
+  - [x] Second pass
   - [ ] Third pass
 - Key-points:
   - Manually create adversarial examples
