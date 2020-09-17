@@ -21,5 +21,5 @@ principle
   - **Search strategy**:
     - Random search, Bayesian optimization, evolutionary methods, reinforcement learning (RL), and gradient-based methods
   - **Performance estimation strategy**:
-    - ![](/home/dang/Documents/paper-notes/neural-architecture-search/img/methods_for_speeding_up_performance_estimation.png)
+    - ![](img/methods_for_speeding_up_performance_estimation.png)
 
